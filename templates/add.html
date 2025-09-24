@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+ <head><title>Add Employee</title></head>
+ <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+ <body>
+   <h1>Add Employee</h1>
+   <form method="post">
+     Name: <input type="text" name="name"><br>
+     DOB: <input type="date" name="dob"><br>
+     Address: <textarea name="address"></textarea><br>
+     Join Date: <input type="date" name="join_date"><br>
+     Basic Salary: <input type="number" step="0.01" name="basic_salary"><br>
+     DA: <input type="number" step="0.01" name="da"><br>
+     <button type="submit">Save</button>
+   </form>
+   <a href="{{ url_for('index') }}">Back</a>
+ </body>
+</html>

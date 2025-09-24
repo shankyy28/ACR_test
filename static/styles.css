@@ -1,0 +1,207 @@
+/* styles.css */
+
+/* Reset / base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Container or wrapper */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h1, h2, h3 {
+  margin-bottom: 16px;
+  color: #2c3e50;
+}
+
+/* Links / buttons */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Forms */
+form {
+  margin-top: 12px;
+}
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+form input[type="text"],
+form input[type="date"],
+form input[type="number"],
+form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form button {
+  padding: 10px 16px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;  /* collapse borders into one */
+  margin-bottom: 20px;
+}
+th, td {
+  border: 1px solid #dee2e6;
+  padding: 10px 12px;
+  text-align: left;
+}
+th {
+  background-color: #e9ecef;
+  color: #495057;
+}
+tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+tr:hover {
+  background-color: #e2e6ea;
+}
+
+/* Detail / info block */
+.detail-block {
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  background-color: #f1f3f5;
+}
+.detail-block p {
+  margin-bottom: 8px;
+}
+
+/* Utility classes */
+.text-right {
+  text-align: right;
+}
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+
+.form-card {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Form title */
+.form-card h1 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Form field rows */
+.form-group {
+  margin-bottom: 18px;
+}
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #495057;
+}
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: #fefefe;
+  transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #80bdff;
+  outline: none;
+  box-shadow: 0 0 3px rgba(0,123,255,0.25);
+}
+
+/* Buttons area */
+.form-actions {
+  text-align: center;
+  margin-top: 24px;
+}
+.form-actions button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.form-actions button:hover {
+  background-color: #0056b3;
+}
+.form-actions a.back-button {
+  margin-left: 16px;
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+.form-actions a.back-button:hover {
+  color: #343a40;
+  text-decoration: none;
+}
+
+/* Error / help text (if you later add validation) */
+.form-group .help-text {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+.form-group .error {
+  font-size: 0.875rem;
+  color: #dc3545;
+  margin-top: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .form-card {
+    padding: 16px;
+    margin: 0 10px;
+  }
+}

@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube_app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kube_app
+  template:
+    metadata:
+      labels:
+        app: kube_app
+    spec:
+      containers:
+      - name: kube_app
+        image: acr5376.azurecr.io/kube_app:1.0
+        ports:
+        - containerPort: 5001
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: employee-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: kube_app
+  ports:
+    - port: 80
+      targetPort: 5001

@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head><title>Employee Details</title></head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <body>
+    <h1>Employee: {{ emp["name"] }}</h1>
+    <p><strong>DOB:</strong> {{ emp["dob"] }}</p>
+    <p><strong>Address:</strong> {{ emp["address"] }}</p>
+    <p><strong>Join Date:</strong> {{ emp["join_date"] }}</p>
+    <p><strong>Basic + DA:</strong> {{ emp["basic_salary"] + emp["da"] }}</p>
+    <h2>Computed Gratuity: ₹ {{ "%.2f"|format(gratuity) }}</h2>
+    <a href="{{ url_for('index') }}">Back to list</a>
+  </body>
+</html>
